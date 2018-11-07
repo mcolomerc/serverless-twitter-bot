@@ -1,0 +1,17 @@
+provider:
+  name: aws
+  runtime: nodejs8.10 
+  stage: dev
+  region: eu-central-1
+  environment:
+    CONSUMER_KEY: #CONSUMER_KEY"
+    CONSUMER_SECRET: #CONSUMER_SECRET#
+    ACCESS_TOKEN_KEY: #ACCESS_TOKEN_KEY#
+    ACCESS_TOKEN_SECRET: #ACCESS_TOKEN_SECRET#
+
+functions:
+  bot:
+    handler: handler.bot
+    events:
+      - schedule: rate(2 hours)
+ 
